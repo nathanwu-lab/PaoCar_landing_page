@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaoCar - Connect, Share, Travel Together</title>
+    <link rel="stylesheet" href="styles.css?v=32">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>PaoCar</h1>
+            </div>
+            <div class="nav-links">
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Home</a>
+                    <div class="dropdown-menu">
+                        <a href="#who-we-are">Who We Are</a>
+                        <a href="#how-it-works">How It Works</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdW_NRj63EgXkisarmN6tUBsnxaA1IKJ8Lvem3klqfgL9y9ow/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Survey</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-icon"></div>
+                <h1>Travel Together, Save Together</h1>
+                <p class="hero-subtitle">Connect with fellow travelers for long-distance rides. Share costs, make friends, and explore the world together.</p>
+                <a href="#ready-to-join" class="btn-primary">Join</a>
+            </div>
+        </section>
+
+    <section id="who-we-are" class="who-we-are">
+        <h2>Who We Are</h2>
+        <p>We are a small team of new grads looking to make a difference in travel. This project was inspired by our own frustration with the cost of traveling and its limtied options. 
+            Through PaoCar, we hope to solve some of these problems, and we hope to have you along for the ride! Sign up to join our newsletter and be the first to know when we launch!</p>
+    </section>
+
+    <section id="ready-to-join" class="ready-to-join">
+        <div class="join-content">
+            <h2>Ready to Join?</h2>
+            <p class="join-subtitle">Join our newsletter to be the first to know when we launch!</p>
+            <form class="join-form" action="https://formspree.io/f/xovknwke" method="POST">
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="hidden" name="_subject" value="New Newsletter Signup - PaoCar">
+                <button type="submit" class="btn-primary">Join Newsletter</button>
+            </form>
+            <p class="survey-divider">Or</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdW_NRj63EgXkisarmN6tUBsnxaA1IKJ8Lvem3klqfgL9y9ow/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="btn-primary survey-btn">Take Our Survey</a>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+            <h2>How It Works</h2>
+             <div class="steps">
+                <div class="step">
+                    <div class="step-icon">📍</div>
+                    <h3>1. Post or Find</h3>
+                    <p>Drivers post trips. Riders find rides.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">💬</div>
+                    <h3>2. Connect</h3>
+                    <p>Chat and get to know each other.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">🛣️</div>
+                    <h3>3. Travel</h3>
+                    <p>Share the journey and split costs.</p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="contact" class="contact">
+            <div class="contact-container">
+                <div class="contact-text">
+                    <div class="contact-icon"></div>
+                    <h2>Contact Us</h2>
+                    <p>Have questions or feedback? We'd love to hear from you!</p>
+                </div>
+                <form class="contact-form" action="https://formspree.io/f/xovknwke" method="POST">
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+
+    <script>
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+        
+        window.addEventListener('scroll', function() {
+            // Only apply hide/show behavior on mobile (768px and below)
+            if (window.innerWidth <= 768) {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > lastScrollTop && scrollTop > 100) {
+                    // Scrolling down - hide header
+                    header.style.transform = 'translateY(-100%)';
+                } else {
+                    // Scrolling up - show header
+                    header.style.transform = 'translateY(0)';
+                }
+                
+                lastScrollTop = scrollTop;
+            } else {
+                // On desktop, always show header
+                header.style.transform = 'translateY(0)';
+            }
+        });
+    </script>
+</body>
+</html>
