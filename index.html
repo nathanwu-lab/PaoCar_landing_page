@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PaoCar - Connect, Share, Travel Together</title>
-    <link rel="stylesheet" href="styles.css?v=34">
+    <link rel="stylesheet" href="styles.css?v=35">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -101,29 +101,5 @@
     </main>
 
 
-    <script>
-        let lastScrollTop = 0;
-        const header = document.querySelector('header');
-        
-        window.addEventListener('scroll', function() {
-            // Only apply hide/show behavior on mobile (768px and below)
-            if (window.innerWidth <= 768) {
-                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                
-                if (scrollTop > lastScrollTop && scrollTop > 100) {
-                    // Scrolling down - hide header
-                    header.style.transform = 'translateY(-100%)';
-                } else {
-                    // Scrolling up - show header
-                    header.style.transform = 'translateY(0)';
-                }
-                
-                lastScrollTop = scrollTop;
-            } else {
-                // On desktop, always show header
-                header.style.transform = 'translateY(0)';
-            }
-        });
-    </script>
 </body>
 </html>
