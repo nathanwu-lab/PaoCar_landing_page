@@ -661,6 +661,13 @@ footer::before {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Mobile Background Fix */
+    body {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center center;
+    }
+    
     /* Header */
     header {
         padding: 0.8rem 0;
@@ -709,6 +716,8 @@ footer::before {
         height: 100vh;
         width: 100%;
         overflow: hidden;
+        background-attachment: scroll;
+        background-position: center center;
     }
     
     .hero-content {
@@ -794,6 +803,8 @@ footer::before {
         width: 100%;
         box-sizing: border-box;
         overflow: hidden;
+        background-attachment: scroll;
+        background-position: center center;
     }
     
     .ready-to-join h2 {
